@@ -1,0 +1,35 @@
+# Project Structure
+
+Here's an overview of the key files and directories in this project:
+
+```text
+documentation-starter-kit/
+├── pages/              # Your documentation pages (.mdx files)
+│   ├── _meta.json      # Sidebar navigation config
+│   ├── index.mdx       # Home page
+│   └── ...
+├── components/         # React components used in docs
+├── public/             # Static assets (images, fonts, etc.)
+├── theme.config.tsx    # Nextra theme configuration
+├── next.config.js      # Next.js configuration
+└── package.json
+```
+
+## Pages Directory
+
+Every `.mdx` file in the `pages/` directory becomes a route:
+
+| File                          | Route               |
+| ----------------------------- | -------------------- |
+| `pages/index.mdx`            | `/`                  |
+| `pages/about.mdx`            | `/about`             |
+| `pages/getting-started.mdx`  | `/getting-started`   |
+| `pages/guides/deploying.mdx` | `/guides/deploying`  |
+
+## Navigation with `_meta.json`
+
+Each directory can have a `_meta.json` file to control the order and titles of pages in the sidebar. See the [Writing Content](/guides/writing-content) guide for details.
+
+## Theme Configuration
+
+The `theme.config.tsx` file controls the look and feel of your site, including the logo, navigation links, footer, and more.

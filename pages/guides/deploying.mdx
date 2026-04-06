@@ -1,0 +1,35 @@
+# Deploying
+
+## Deploy to Vercel
+
+The easiest way to deploy your Nextra docs is with [Vercel](https://vercel.com):
+
+1. Push your repository to GitHub
+2. Go to [vercel.com/new](https://vercel.com/new) and import your repository
+3. Vercel will auto-detect the Next.js framework and configure the build
+4. Click **Deploy**
+
+Your site will be live and automatically redeploy on every push to your main branch.
+
+## Build Settings
+
+If you need to configure the build manually:
+
+| Setting          | Value          |
+| ---------------- | -------------- |
+| Framework        | Next.js        |
+| Build Command    | `pnpm build`   |
+| Output Directory | `.next`        |
+| Install Command  | `pnpm install`  |
+
+## Environment Variables
+
+If your docs require environment variables, add them in **Vercel Dashboard > Settings > Environment Variables**.
+
+## Custom Domain
+
+To use a custom domain:
+
+1. Go to your project's **Settings > Domains** in Vercel
+2. Add your domain
+3. Update your DNS records as instructed
