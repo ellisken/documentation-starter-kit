@@ -1,22 +1,55 @@
-# Nextra Docs Template 
+# Documentation Starter Kit
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+A documentation site built with [Nextra](https://nextra.site) and deployed on [Vercel](https://vercel.com).
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+[**Live Site →**](https://documentation-starter-kit-mauve-three.vercel.app/)
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+## Features
 
-## Quick Start
+- MDX support — write Markdown with embedded React components
+- Automatic sidebar navigation via `_meta.json` files
+- Full-text search
+- Syntax highlighting with line numbers, copy button, and filename labels
+- Light/dark mode
+- Responsive layout
 
-Click the button to clone this repository and deploy it on Vercel:
+## Project Structure
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+```
+├── pages/                 # Documentation pages (.mdx)
+│   ├── _meta.json         # Root sidebar config
+│   ├── index.mdx          # Home page
+│   ├── getting-started/   # Getting started guides
+│   ├── guides/            # Usage guides
+│   └── advanced/          # Advanced topics
+├── components/            # React components
+├── theme.config.tsx       # Nextra theme configuration
+├── next.config.js         # Next.js configuration
+└── package.json
+```
 
 ## Local Development
 
-First, run `pnpm i` to install the dependencies.
+Install dependencies:
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+```bash
+pnpm install
+```
+
+Start the dev server:
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Build
+
+```bash
+pnpm build
+pnpm start
+```
 
 ## License
 
