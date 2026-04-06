@@ -1,0 +1,70 @@
+# Writing Content
+
+Nextra uses [MDX](https://mdxjs.com/), which lets you write JSX directly in your Markdown files.
+
+## Creating a New Page
+
+Add a `.mdx` file to the `pages/` directory:
+
+```mdx filename="pages/my-page.mdx"
+# My Page Title
+
+This is my new documentation page.
+```
+
+Your page is now accessible at `/my-page`.
+
+## Organizing Pages in Folders
+
+Group related pages by creating a directory with an index page:
+
+```text
+pages/
+└── my-section/
+    ├── _meta.json       # Controls sidebar order for this section
+    ├── page-one.mdx
+    └── page-two.mdx
+```
+
+## Configuring the Sidebar with `_meta.json`
+
+Create a `_meta.json` in any directory to control the order and display of pages:
+
+```json filename="pages/_meta.json"
+{
+  "index": "Home",
+  "getting-started": "Getting Started",
+  "guides": "Guides",
+  "about": {
+    "title": "About",
+    "type": "page"
+  }
+}
+```
+
+Pages appear in the sidebar in the order they are listed in `_meta.json`.
+
+## Using React Components
+
+Since Nextra supports MDX, you can import and use React components directly:
+
+```mdx
+import { MyComponent } from '../components/MyComponent'
+
+# My Page
+
+Here's an interactive component:
+
+<MyComponent />
+```
+
+## Syntax Highlighting
+
+Code blocks support syntax highlighting, filenames, line highlighting, and a copy button:
+
+````mdx
+```js filename="example.js" {2} copy
+const greeting = 'hello';
+console.log(greeting);
+```
+````
