@@ -1,6 +1,7 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 import CopyAsMarkdown from './components/CopyAsMarkdown'
+import AskAgent from './components/AskAgent'
 
 const config: DocsThemeConfig = {
   logo: (
@@ -18,7 +19,12 @@ const config: DocsThemeConfig = {
   },
   toc: {
     backToTop: true,
-    extraContent: <CopyAsMarkdown />,
+    extraContent: (
+      <>
+        <CopyAsMarkdown />
+        <AskAgent />
+      </>
+    ),
   },
   editLink: {
     text: 'Edit this page on GitHub',
